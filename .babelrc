@@ -1,0 +1,30 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "uglify": true
+      },
+      "modules": false,
+      "useBuiltIns": true
+    }],
+    "react",
+    "stage-1"
+  ],
+  "plugins": [
+    "react-loadable/babel"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "env",
+        "react",
+        "stage-1"
+      ]
+    },
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types"
+      ]
+    }
+  }
+}
